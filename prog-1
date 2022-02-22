@@ -1,0 +1,23 @@
+Write the unix command to count the occurrence of the word “Unix” in a given file. 
+
+The file will be given as command line argument while the script containing your command will be run.
+
+Note : The search for “Unix”  should be case-insensitive.
+
+For example,
+
+If the input file contains the following lines
+
+Unix is an multi-user,multi-tasking system.
+
+It is a command based operating system.
+
+We will learn unix  architecture and the unix commands in  this module.
+
+Then the output will be,
+
+3
+
+Solution:
+
+grep -o -i unix | wc -l

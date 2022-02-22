@@ -1,0 +1,39 @@
+Employee Details are stored in a file in the following format:
+
+EmpID;EmpName;Salary
+
+Write a shell script to find the count of employees whose salary is less than the average salary of all employees.
+
+The file with the employee details will be given as a command line argument when your script will run.
+
+For example,
+
+If the input file contains the following employee records
+
+EmpID;EmpName;Salary
+100;A;30000
+102;B;45000
+103;C;15000
+104;D;40000
+ 
+
+The output will be,
+
+2
+
+Solutions:
+
+read
+awk ‘BEGIN{ FS=”;”;Total;count;i;num}
+     { 
+       sum+=$3;num+=1;a[i++]=$3;
+         
+     }
+     END{ avg=sum/num;
+     for(j=0;j<i;j++){
+          if(a[j]<avg){
+              count++
+          }
+     } 
+       {print count} 
+    }’

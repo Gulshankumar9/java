@@ -1,0 +1,26 @@
+Student details are stored in a file in the following order with space as the delimiter:
+
+RollNo Name Score
+
+Write a unix command to find the name of the Student who has the highest score.
+
+The file will be given as a command line argument when the script containing your command will run.
+
+For example,
+
+If the input file has the below content
+
+RollNo Name Score
+234 ABC 70
+567 QWE 12
+457 RTE 56
+234 XYZ 80
+456 ERT 45
+
+The output will be
+
+XYZ
+
+Solution
+
+sort -k3,3 -rn -t” ” | head -n1 | awk ‘{print $2}’
